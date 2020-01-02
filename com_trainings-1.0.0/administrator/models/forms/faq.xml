@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="ordering"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field name="created_by" type="createdby" default="0" label="COM_TRAININGS_FORM_LBL_FAQ_CREATED_BY" description="COM_TRAININGS_FORM_DESC_FAQ_CREATED_BY" hidden="true" hint="COM_TRAININGS_FORM_LBL_FAQ_CREATED_BY"/>
+    <field name="modified_by" type="modifiedby" default="0" label="COM_TRAININGS_FORM_LBL_FAQ_MODIFIED_BY" description="COM_TRAININGS_FORM_DESC_FAQ_MODIFIED_BY" hidden="true" hint="COM_TRAININGS_FORM_LBL_FAQ_MODIFIED_BY"/>
+   <!--  <field name="categoryname" type="list" class="faq" label="COM_TRAININGS_FORM_LBL_FAQ_CATEGORYNAME" description="COM_TRAININGS_FORM_DESC_FAQ_CATEGORYNAME" hint="COM_TRAININGS_FORM_LBL_FAQ_CATEGORYNAME">
+      <option value="DT">COM_TRAININGS_FAQS_CATEGORYNAME_OPTION_DT</option>
+    </field>  -->
+    <field name="categoryname" type="sql" class="faq" label="COM_TRAININGS_FORM_LBL_FAQ_CATEGORYNAME" description="COM_TRAININGS_FORM_DESC_FAQ_CATEGORYNAME" hint="COM_TRAININGS_FORM_LBL_FAQ_CATEGORYNAME" 
+    query="SELECT categoriesname FROM #__trainings_list GROUP BY categoriesname"
+    key_field="categoriesname" value_field="categoriesname" header="Please select your option">
+     </field>
+    <field name="question" filter="safehtml" type="textarea" label="COM_TRAININGS_FORM_LBL_FAQ_QUESTION" description="COM_TRAININGS_FORM_DESC_FAQ_QUESTION" hint="COM_TRAININGS_FORM_LBL_FAQ_QUESTION"/>
+    <field name="answer" filter="safehtml" type="textarea" label="COM_TRAININGS_FORM_LBL_FAQ_ANSWER" description="COM_TRAININGS_FORM_DESC_FAQ_ANSWER" hint="COM_TRAININGS_FORM_LBL_FAQ_ANSWER"/>
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+  </fieldset>
+  <fieldset name="accesscontrol">
+    <field name="asset_id" type="hidden" filter="unset"/>
+    <field name="rules" type="rules" label="JFIELD_RULES_LABEL" translate_label="false" filter="rules" validate="rules" class="inputbox" component="com_trainings" section="faq"/>
+  </fieldset>
+</form>

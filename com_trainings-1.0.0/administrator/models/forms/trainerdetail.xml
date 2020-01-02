@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="ordering"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field name="checked_out" type="hidden" filter="unset"/>
+    <field name="checked_out_time" default="0000-00-00 00:00:00" type="hidden" filter="unset"/>
+    <field name="created_by" type="createdby" default="0" label="COM_TRAININGS_FORM_LBL_TRAINERDETAIL_CREATED_BY" description="COM_TRAININGS_FORM_DESC_TRAINERDETAIL_CREATED_BY" hidden="true" hint="COM_TRAININGS_FORM_LBL_TRAINERDETAIL_CREATED_BY"/>
+    <field name="modified_by" type="modifiedby" default="0" label="COM_TRAININGS_FORM_LBL_TRAINERDETAIL_MODIFIED_BY" description="COM_TRAININGS_FORM_DESC_TRAINERDETAIL_MODIFIED_BY" hidden="true" hint="COM_TRAININGS_FORM_LBL_TRAINERDETAIL_MODIFIED_BY"/>
+     <field name="trainername" type="sql" class="trainer" label="COM_TRAININGS_FORM_LBL_TRAINERDETAIL_TRAINERNAME" description="COM_TRAININGS_FORM_DESC_TRAINERDETAIL_TRAINERNAME" hint="COM_TRAININGS_FORM_LBL_TRAINERDETAIL_TRAINERNAME" 
+    query="SELECT trainername FROM #__trainings_list GROUP BY trainername"
+    key_field="trainername" value_field="trainername" header="Please select your option">
+     </field>
+    <field name="trainerimage" type="FileMultiple" label="COM_TRAININGS_FORM_LBL_TRAINERDETAIL_TRAINERIMAGE" description="COM_TRAININGS_FORM_DESC_TRAINERDETAIL_TRAINERIMAGE" hint="COM_TRAININGS_FORM_LBL_TRAINERDETAIL_TRAINERIMAGE"/>
+    <field name="trainerdesc" filter="safehtml" type="textarea" label="COM_TRAININGS_FORM_LBL_TRAINERDETAIL_TRAINERDESC" description="COM_TRAININGS_FORM_DESC_TRAINERDETAIL_TRAINERDESC" hint="COM_TRAININGS_FORM_LBL_TRAINERDETAIL_TRAINERDESC"/>
+    <field name="trainerdesignation" filter="safehtml" type="text" label="COM_TRAININGS_FORM_LBL_TRAINERDETAIL_TRAINERDESIGNATION" description="COM_TRAININGS_FORM_DESC_TRAINERDETAIL_TRAINERDESIGNATION" hint="COM_TRAININGS_FORM_LBL_TRAINERDETAIL_TRAINERDESIGNATION"/>
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+  </fieldset>
+</form>

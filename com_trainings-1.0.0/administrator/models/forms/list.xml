@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="trainingid" filter="safehtml" type="text" label="COM_TRAININGS_FORM_LBL_LIST_TRAININGID" description="COM_TRAININGS_FORM_DESC_LIST_TRAININGID" hint="COM_TRAININGS_FORM_LBL_LIST_TRAININGID"/>
+    <field name="topicname" filter="safehtml" type="text" label="COM_TRAININGS_FORM_LBL_LIST_TOPICNAME" description="COM_TRAININGS_FORM_DESC_LIST_TOPICNAME" hint="COM_TRAININGS_FORM_LBL_LIST_TOPICNAME"/>
+    <field name="titleen" filter="safehtml" type="text" label="COM_TRAININGS_FORM_LBL_LIST_TITLEEN" description="COM_TRAININGS_FORM_DESC_LIST_TITLEEN" hint="COM_TRAININGS_FORM_LBL_LIST_TITLEEN"/>
+    <field name="descriptionen" filter="safehtml" type="text" label="COM_TRAININGS_FORM_LBL_LIST_DESCRIPTIONEN" description="COM_TRAININGS_FORM_DESC_LIST_DESCRIPTIONEN" hint="COM_TRAININGS_FORM_LBL_LIST_DESCRIPTIONEN"/>
+    <field name="startdate" filter="safehtml" type="text" label="COM_TRAININGS_FORM_LBL_LIST_STARTDATE" description="COM_TRAININGS_FORM_DESC_LIST_STARTDATE" hint="COM_TRAININGS_FORM_LBL_LIST_STARTDATE"/>
+    <field name="starttime" filter="safehtml" type="text" label="COM_TRAININGS_FORM_LBL_LIST_STARTTIME" description="COM_TRAININGS_FORM_DESC_LIST_STARTTIME" hint="COM_TRAININGS_FORM_LBL_LIST_STARTTIME"/>
+    <field name="testdate" filter="safehtml" type="text" label="COM_TRAININGS_FORM_LBL_LIST_TESTDATE" description="COM_TRAININGS_FORM_DESC_LIST_TESTDATE" hint="COM_TRAININGS_FORM_LBL_LIST_TESTDATE"/>
+    <field name="traininglanguage" filter="safehtml" type="text" label="COM_TRAININGS_FORM_LBL_LIST_TRAININGLANGUAGE" description="COM_TRAININGS_FORM_DESC_LIST_TRAININGLANGUAGE" hint="COM_TRAININGS_FORM_LBL_LIST_TRAININGLANGUAGE"/>
+    <field name="categoryname" filter="safehtml" type="text" label="COM_TRAININGS_FORM_LBL_LIST_CATEGORYNAME" description="COM_TRAININGS_FORM_DESC_LIST_CATEGORYNAME" hint="COM_TRAININGS_FORM_LBL_LIST_CATEGORYNAME"/>
+    <field name="businessunitname" filter="safehtml" type="text" label="COM_TRAININGS_FORM_LBL_LIST_BUSINESSUNITNAME" description="COM_TRAININGS_FORM_DESC_LIST_BUSINESSUNITNAME" hint="COM_TRAININGS_FORM_LBL_LIST_BUSINESSUNITNAME"/>
+    <field name="topiclogo" filter="safehtml" type="text" label="COM_TRAININGS_FORM_LBL_LIST_TOPICLOGO" description="COM_TRAININGS_FORM_DESC_LIST_TOPICLOGO" hint="COM_TRAININGS_FORM_LBL_LIST_TOPICLOGO"/>
+    <field name="trainingtype" filter="safehtml" type="text" label="COM_TRAININGS_FORM_LBL_LIST_TRAININGTYPE" description="COM_TRAININGS_FORM_DESC_LIST_TRAININGTYPE" hint="COM_TRAININGS_FORM_LBL_LIST_TRAININGTYPE"/>
+    <field name="trainingtypecode" filter="safehtml" type="text" label="COM_TRAININGS_FORM_LBL_LIST_TRAININGTYPECODE" description="COM_TRAININGS_FORM_DESC_LIST_TRAININGTYPECODE" hint="COM_TRAININGS_FORM_LBL_LIST_TRAININGTYPECODE"/>
+    <field name="availableseats" filter="safehtml" type="text" label="COM_TRAININGS_FORM_LBL_LIST_AVAILABLESEATS" description="COM_TRAININGS_FORM_DESC_LIST_AVAILABLESEATS" hint="COM_TRAININGS_FORM_LBL_LIST_AVAILABLESEATS"/>
+    <field name="isloggedin" filter="safehtml" type="text" label="COM_TRAININGS_FORM_LBL_LIST_ISLOGGEDIN" description="COM_TRAININGS_FORM_DESC_LIST_ISLOGGEDIN" hint="COM_TRAININGS_FORM_LBL_LIST_ISLOGGEDIN"/>
+    <field name="issubscribed" filter="safehtml" type="text" label="COM_TRAININGS_FORM_LBL_LIST_ISSUBSCRIBED" description="COM_TRAININGS_FORM_DESC_LIST_ISSUBSCRIBED" hint="COM_TRAININGS_FORM_LBL_LIST_ISSUBSCRIBED"/>
+    <field name="topiccovered" filter="safehtml" type="text" label="COM_TRAININGS_FORM_LBL_LIST_TOPICCOVERED" description="COM_TRAININGS_FORM_DESC_LIST_TOPICCOVERED" hint="COM_TRAININGS_FORM_LBL_LIST_TOPICCOVERED"/>
+    <field name="topicrequirements" filter="safehtml" type="text" label="COM_TRAININGS_FORM_LBL_LIST_TOPICREQUIREMENTS" description="COM_TRAININGS_FORM_DESC_LIST_TOPICREQUIREMENTS" hint="COM_TRAININGS_FORM_LBL_LIST_TOPICREQUIREMENTS"/>
+    <field name="topicprice" filter="safehtml" type="text" label="COM_TRAININGS_FORM_LBL_LIST_TOPICPRICE" description="COM_TRAININGS_FORM_DESC_LIST_TOPICPRICE" hint="COM_TRAININGS_FORM_LBL_LIST_TOPICPRICE"/>
+    <field name="categoriesname" filter="safehtml" type="text" label="COM_TRAININGS_FORM_LBL_LIST_CATEGORIESNAME" description="COM_TRAININGS_FORM_DESC_LIST_CATEGORIESNAME" hint="COM_TRAININGS_FORM_LBL_LIST_CATEGORIESNAME"/>
+    <field name="targetaudience" filter="safehtml" type="text" label="COM_TRAININGS_FORM_LBL_LIST_TARGETAUDIENCE" description="COM_TRAININGS_FORM_DESC_LIST_TARGETAUDIENCE" hint="COM_TRAININGS_FORM_LBL_LIST_TARGETAUDIENCE"/>
+    <field name="sessionduration" filter="safehtml" type="text" label="COM_TRAININGS_FORM_LBL_LIST_SESSIONDURATION" description="COM_TRAININGS_FORM_DESC_LIST_SESSIONDURATION" hint="COM_TRAININGS_FORM_LBL_LIST_SESSIONDURATION"/>
+    <field name="locationname" filter="safehtml" type="text" label="COM_TRAININGS_FORM_LBL_LIST_LOCATIONNAME" description="COM_TRAININGS_FORM_DESC_LIST_LOCATIONNAME" hint="COM_TRAININGS_FORM_LBL_LIST_LOCATIONNAME"/>
+    <field name="locationurl" filter="safehtml" type="text" label="COM_TRAININGS_FORM_LBL_LIST_LOCATIONURL" description="COM_TRAININGS_FORM_DESC_LIST_LOCATIONURL" hint="COM_TRAININGS_FORM_LBL_LIST_LOCATIONURL"/>
+    <field name="topicpaid" filter="safehtml" type="text" label="COM_TRAININGS_FORM_LBL_LIST_TOPICPAID" description="COM_TRAININGS_FORM_DESC_LIST_TOPICPAID" hint="COM_TRAININGS_FORM_LBL_LIST_TOPICPAID"/>
+    <field name="topicdesc" filter="safehtml" type="text" label="COM_TRAININGS_FORM_LBL_LIST_TOPICDESC" description="COM_TRAININGS_FORM_DESC_LIST_TOPICDESC" hint="COM_TRAININGS_FORM_LBL_LIST_TOPICDESC"/>
+    <field name="trainername" filter="safehtml" type="text" label="COM_TRAININGS_FORM_LBL_LIST_TRAINERNAME" description="COM_TRAININGS_FORM_DESC_LIST_TRAINERNAME" hint="COM_TRAININGS_FORM_LBL_LIST_TRAINERNAME"/>
+    <field name="schedulelist" filter="safehtml" type="text" label="COM_TRAININGS_FORM_LBL_LIST_SCHEDULELIST" description="COM_TRAININGS_FORM_DESC_LIST_SCHEDULELIST" hint="COM_TRAININGS_FORM_LBL_LIST_SCHEDULELIST"/>
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+  </fieldset>
+</form>
