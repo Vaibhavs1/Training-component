@@ -3,6 +3,7 @@ CREATE TABLE IF NOT EXISTS `#__trainings_list` (
 
 `trainingid` VARCHAR(255)  NOT NULL ,
 `topicname` VARCHAR(255)  NOT NULL ,
+`alias` varchar(400) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '',
 `titleen` VARCHAR(255)  NOT NULL ,
 `descriptionen` text NOT NULL ,
 `startdate` VARCHAR(255)  NOT NULL ,
@@ -31,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `#__trainings_list` (
 `schedulelist` text  NOT NULL ,
 PRIMARY KEY (`id`)
 ) DEFAULT COLLATE=utf8mb4_unicode_ci;
-
+CREATE UNIQUE INDEX `aliasindex` ON `#__trainings_list` (`alias`);
 
 
 CREATE TABLE IF NOT EXISTS `#__trainings_faq` (

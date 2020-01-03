@@ -36,6 +36,7 @@ class TrainingsModelLists extends \Joomla\CMS\MVC\Model\ListModel
 				'id', 'a.`id`',
 				'trainingid', 'a.`trainingid`',
 				'topicname', 'a.`topicname`',
+				'alias', 'a.`alias`',
 				'titleen', 'a.`titleen`',
 				'descriptionen', 'a.`descriptionen`',
 				'startdate', 'a.`startdate`',

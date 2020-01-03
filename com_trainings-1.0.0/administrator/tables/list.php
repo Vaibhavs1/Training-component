@@ -138,6 +138,12 @@ class TrainingsTablelist extends \Joomla\CMS\Table\Table
 		{
 			$this->ordering = self::getNextOrder();
 		}
+		$this->alias = trim($this->alias);
+		if (empty($this->alias))
+		{
+			$this->alias = $this->topicname;
+		}
+		$this->alias = JFilterOutput::stringURLSafe($this->alias);
 		
 		
 

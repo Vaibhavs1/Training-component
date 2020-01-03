@@ -53,14 +53,22 @@ class TrainingsRouter extends \Joomla\CMS\Component\Router\RouterBase
 
 		if (isset($query['id']))
 		{
-			if ($view !== null)
+			/*if ($view !== null)
 			{
 				$segments[] = $query['id'];
 			}
 			else
 			{
 				$segments[] = $query['id'];
-			}
+			}*/
+			$db = JFactory::getDbo();
+			$qry = $db->getQuery(true);
+			$qry->select('alias');
+			$qry->from('#__trainings_list');
+			$qry->where('id = ' . $db->quote($query['id']));
+			$db->setQuery($qry);
+			$alias = $db->loadResult();
+			$segments[] = $alias;
 
 			unset($query['id']);
 		}
@@ -81,13 +89,26 @@ class TrainingsRouter extends \Joomla\CMS\Component\Router\RouterBase
 	 */
 	public function parse(&$segments)
 	{
+		//echo "<pre>";print_r($segments);exit;
 		$vars = array();
-
+			$db = JFactory::getDbo();
+		$qry = $db->getQuery(true);
+		$qry->select('id');
+		$qry->from('#__trainings_list');
+		$qry->where('alias = ' . $db->quote($segments[1]));
+		$db->setQuery($qry);
+		$id = $db->loadResult();
+        
+		if(!empty($id))
+		{
+			$vars['id'] = $id;
+			$vars['view'] = $segments[0];
+		}
 		// View is always the first element of the array
-		$vars['view'] = array_shift($segments);
+		//$vars['view'] = array_shift($segments);
 		$model        = TrainingsHelpersTrainings::getModel($vars['view']);
 		
-		while (!empty($segments))
+		/*while (!empty($segments))
 		{
 			$segment = array_pop($segments);
 
@@ -100,7 +121,7 @@ class TrainingsRouter extends \Joomla\CMS\Component\Router\RouterBase
 			{
 				$vars['task'] = $vars['view'] . '.' . $segment;
 			}
-		}
+		}*/
 
 		return $vars;
 	}
