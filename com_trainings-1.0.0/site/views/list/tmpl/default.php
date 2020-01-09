@@ -60,7 +60,7 @@ $desc = "";
 	</div>
 	<div id="detail_right">
 		<p class="seat"><?php echo $this->item->availableseats; ?>&nbsp;spots left!</p>
-		<h3 class="price">Price : <?php echo $this->item->topicprice; ?></h3>
+		<h3 class="price"><?php echo JText::_('COM_TRAININGS_FORM_LBL_LIST_TOPICPRICE'); ?> : <?php echo $this->item->topicprice; ?></h3>
 		<p>(inc VAT)</p>
 
 		<button>Book</button>
@@ -70,9 +70,9 @@ $desc = "";
 
 <div id="tab_">
 	<div class="tab">
-	  <button class="tablinks active" onclick="openCity(event, 'Training_Overview')">Training Overview</button>
-	  <button class="tablinks" onclick="openCity(event, 'Training_Schedule')">Training Schedule</button>
-	  <button class="tablinks" onclick="openCity(event, 'FAQs')">FAQs</button>
+	  <button class="tablinks active" onclick="openCity(event, 'Training_Overview')"><?php echo JText::_('MOD_TRAINING_LISTS_TRAININGOVERVIEW'); ?></button>
+	  <button class="tablinks" onclick="openCity(event, 'Training_Schedule')"><?php echo JText::_('MOD_TRAINING_LISTS_TRAININGSCHEDULE'); ?></button>
+	  <button class="tablinks" onclick="openCity(event, 'FAQs')"><?php echo JText::_('COM_TRAININGS_TITLE_FAQS'); ?></button>
 	</div>
 
 	<div id="Training_Overview" class="tabcontent">
@@ -81,14 +81,14 @@ $desc = "";
 	
 	 <div class="topic_wrapp">
 	  	<span class="left-side-c">
-	  		<h3>Topics Covered</h3>
+	  		<h3><?php echo JText::_('COM_TRAININGS_LISTS_TOPICCOVERED'); ?></h3>
 	  		<ul>
 	  			<?php echo $this->item->topiccovered;?>
 	  		</ul>
 
 	  	</span>
 	  	<span class="left-side-c">
-	  		<h3>This course is designed for</h3>
+	  		<h3><?php echo JText::_('COM_TRAININGS_LISTS_TARGETAUDIENCE'); ?></h3>
 	  		<ul>
 	  			<?php echo $this->item->targetaudience;?>
 	  		</ul>
@@ -98,7 +98,7 @@ $desc = "";
 
 	 <div class="topic_wrapp">
 	  	<span class="left-side-c">
-	  		<h3>Training Days</h3>
+	  		<h3><?php echo JText::_('COM_TRAININGS_LISTS_DAYS'); ?></h3>
 	  		<?php 
 	  			$training_days = "";
 	  			$ct = 1;
@@ -114,7 +114,7 @@ $desc = "";
 	  		 ?>
 	  	</span>
 	  	<span class="left-side-c">
-	  		<h3>Requirements</h3>
+	  		<h3><?php echo JText::_('COM_TRAININGS_LISTS_TOPICREQUIREMENTS'); ?></h3>
 	  		
 	  			<?php echo $this->item->topicrequirements;?>
 	  			
@@ -124,7 +124,7 @@ $desc = "";
 	 </div>
 
 	 <div class="topic_wrapp_last">
-	   		<h3>The Instructor</h3>
+	   		<h3><?php echo JText::_('COM_TRAININGS_TITLE_TRAINERNAME'); ?></h3>
 	  		<div class="inst_img">
 	  			<img src="<?php echo $imagesrc; ?>">
 	  		</div>
@@ -147,11 +147,11 @@ $desc = "";
 			case 'F':
 				$cnt = 1;
 				$day_count = count($schedule_list);
-				$html = "<h1>".$day_count." Full Days - Weekdays Only</h1>";
+				$html = "<h1>".$day_count.JText::_('COM_TRAININGS_TITLE_FULLDAYSONLY')."</h1>";
 				foreach ($schedule_list as $key => $value) {
 					$datetime = DateTime::createFromFormat('d-M-Y', $value['scheduleStartDate']);
 					 
-					$html .="<br><p><b>Day ".$cnt.": </b> ".$datetime->format('l F jS Y').'</p>' ;
+					$html .="<br><p><b> ".JText::_('COM_TRAININGS_TITLE_DAY').$cnt.": </b> ".$datetime->format('l F jS Y').'</p>' ;
 					$html .= "<p><b>Time :  </b> ".date('h:i a', strtotime($value['scheduleStartTime']))." - ".date('h:i a', strtotime($value['scheduleEndTime']))."</p><br>";
 					$html .="<p>".$value['trainingCourseDescription']."</p><hr>";
 					$cnt ++; 
@@ -163,12 +163,12 @@ $desc = "";
 			case 'P':
 				$cnt = 1;
 				$day_count = count($schedule_list);
-				$html = "<h1>".$day_count." Full Days - Weekends Only</h1>";
+				$html = "<h1>".$day_count.JText::_('COM_TRAININGS_TITLE_FULLDAYSONLY')."</h1>";
 				foreach ($schedule_list as $key => $value) {
 					$datetime = DateTime::createFromFormat('d-M-Y', $value['scheduleStartDate']);
 					 
-					$html .="<br><p><b>Day ".$cnt.": </b> ".$datetime->format('l F jS Y').'</p>' ;
-					$html .= "<p><b>Time :  </b> ".date('h:i a', strtotime($value['scheduleStartTime']))." - ".date('h:i a', strtotime($value['scheduleEndTime']))."</p><br>";
+					$html .="<br><p><b> ".JText::_('COM_TRAININGS_TITLE_DAY').$cnt.": </b> ".$datetime->format('l F jS Y').'</p>' ;
+					$html .= "<p><b>".JText::_('COM_TRAININGS_TITLE_TIME')." :</b> ".date('h:i a', strtotime($value['scheduleStartTime']))." - ".date('h:i a', strtotime($value['scheduleEndTime']))."</p><br>";
 					$html .="<p>".$value['trainingCourseDescription']."</p><hr>";
 					$cnt ++; 
 				}

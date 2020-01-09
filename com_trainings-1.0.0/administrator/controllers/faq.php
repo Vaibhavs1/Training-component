@@ -1,11 +1,4 @@
 <?php
-/**
- * @version    CVS: 1.0.0
- * @package    com_trainings
- * @author     Vaibhav Sadafule <vaibhav.s@edreamz.in>
- * @copyright  2019 Vaibhav Sadafule
- * @license    GNU General Public License version 2 or later; see LICENSE.txt
- */
 
 // No direct access
 defined('_JEXEC') or die;
