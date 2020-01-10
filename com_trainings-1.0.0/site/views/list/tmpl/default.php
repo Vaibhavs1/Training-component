@@ -59,7 +59,7 @@ $desc = "";
 
 	</div>
 	<div id="detail_right">
-		<p class="seat"><?php echo $this->item->availableseats; ?>&nbsp;spots left!</p>
+		<p class="seat"><?php echo $this->item->availableseats; ?>&nbsp;<?php echo JText::_('COM_TRAININGS_FORM_LBL_LIST_SPOTSLEFT'); ?></p>
 		<h3 class="price"><?php echo JText::_('COM_TRAININGS_FORM_LBL_LIST_TOPICPRICE'); ?> : <?php echo $this->item->topicprice; ?></h3>
 		<p>(inc VAT)</p>
 

@@ -1,12 +1,5 @@
 <?php
 
-/**
- * @version    CVS: 1.0.0
- * @package    Com_Trainings
- * @author     vaibhav sadafule <vaibhav.s@edreamz.in>
- * @copyright  2019 Vaibhav Sadafule
- * @license    GNU General Public License version 2 or later; see LICENSE.txt
- */
 // No direct access.
 defined('_JEXEC') or die;
 
@@ -28,19 +21,7 @@ class TrainingsModelList extends \Joomla\CMS\MVC\Model\ItemModel
     public $_item;
 
         
-    
-        
-	/**
-	 * Method to auto-populate the model state.
-	 *
-	 * Note. Calling getState in this method will result in recursion.
-	 *
-	 * @return void
-	 *
-	 * @since    1.6
-	 *
-     * @throws Exception
-	 */
+
 	protected function populateState()
 	{
 		$app  = Factory::getApplication('com_trainings');

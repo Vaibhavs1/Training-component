@@ -48,9 +48,7 @@ class TrainingsModelTrainerdetails extends \Joomla\CMS\MVC\Model\ListModel
 
 		parent::__construct($config);
 	}
-
-        
-        
+ 
 	/**
 	 * Method to auto-populate the model state.
 	 *

@@ -123,8 +123,6 @@ class TrainingsModelTrainerdetail extends \Joomla\CMS\MVC\Model\ItemModel
                 } 
             }
         
-            
-
 		if (isset($this->_item->created_by))
 		{
 			$this->_item->created_by_name = JFactory::getUser($this->_item->created_by)->name;
@@ -247,40 +245,6 @@ class TrainingsModelTrainerdetail extends \Joomla\CMS\MVC\Model\ItemModel
                 
 	}
 
-	/**
-	 * Publish the element
-	 *
-	 * @param   int $id    Item id
-	 * @param   int $state Publish state
-	 *
-	 * @return  boolean
-	 */
-	public function publish($id, $state)
-	{
-		$table = $this->getTable();
-                
-		$table->load($id);
-		$table->state = $state;
-
-		return $table->store();
-                
-	}
-
-	/**
-	 * Method to delete an item
-	 *
-	 * @param   int $id Element id
-	 *
-	 * @return  bool
-	 */
-	public function delete($id)
-	{
-		$table = $this->getTable();
-
-                
-                    return $table->delete($id);
-                
-	}
 
 	
 }

@@ -14,7 +14,7 @@ defined('_JEXEC') or die; ?>
 
 					<div class="details" style="padding: 20px;">
 						<h3 class="title"><?php echo $item->titleen; ?></h3>
-						<p class="sits"><?php echo $item->availableseats; ?> spots left!</p>
+						<p class="sits"><?php echo $item->availableseats; ?><?php echo JText::_('MOD_TRAINING_LISTS_SPOTSLEFT'); ?></p>
 						<p class="date"><?php echo $item->startdate." ".$item->starttime ; ?></p>
 						<span><?php echo $item->descriptionen; ?></span>
 						<p class="price"><?php echo JText::_('MOD_TRAINING_LISTS_TOPICPRICE'); ?>:<?php echo $item->topicprice; ?> <?php echo JText::_('MOD_TRAINING_LISTS_CURRENCY'); ?></p>
