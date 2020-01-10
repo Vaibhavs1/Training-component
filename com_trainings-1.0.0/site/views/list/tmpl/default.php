@@ -1,11 +1,5 @@
 <?php
-/**
- * @version    CVS: 1.0.0
- * @package    Com_Trainings
- * @author     vaibhav sadafule <vaibhav.s@edreamz.in>
- * @copyright  2019 Vaibhav Sadafule
- * @license    GNU General Public License version 2 or later; see LICENSE.txt
- */
+
 use \Joomla\CMS\Factory;
 use \Joomla\CMS\Uri\Uri;
 // No direct access
@@ -28,31 +22,22 @@ $desc = "";
 		$desc = $trainerdata->trainerdesc;
 	}
 ?>
-
 <div class="item_fields">
-
-	
-
 <div id="detail_main">
 	<div id="detail_left">
 		<h3><?php echo $this->item->topicname; ?></h3>
 
 		<p><?php echo $this->item->descriptionen; ?></p>
-
 		<br>
-
-		<p class="duration"><b>Duration: </b>
+		<p class="duration"><b><?php echo JText::_('COM_TRAININGS_FORM_LBL_LIST_DURATION'); ?> </b>
 			<?php echo $this->item->sessionduration; ?>
 		</p>
-
-		<p class="language"><b>Language: </b>
+		<p class="language"><b><?php echo JText::_('COM_TRAININGS_FORM_LBL_LIST_LANGUAGE'); ?> </b>
 			<?php echo $this->item->traininglanguage; ?>
 		</p>
-
-		<p class="certificate"><b>Certificate: </b>
-			AED 150 (in VAT) / Participant
+		<p class="certificate"><b><?php echo JText::_('COM_TRAININGS_FORM_LBL_LIST_CERTIFICATE'); ?> </b>
+			<?php echo JText::_('COM_TRAININGS_FORM_LBL_LIST_AEDVAT'); ?>
 		</p>
-
 		<p class="location"><b>Location: </b>
 			<a href="<?php echo $this->item->locationurl; ?>" target="_blank"><?php echo $this->item->locationname; ?></a>
 		</p>
@@ -61,9 +46,9 @@ $desc = "";
 	<div id="detail_right">
 		<p class="seat"><?php echo $this->item->availableseats; ?>&nbsp;<?php echo JText::_('COM_TRAININGS_FORM_LBL_LIST_SPOTSLEFT'); ?></p>
 		<h3 class="price"><?php echo JText::_('COM_TRAININGS_FORM_LBL_LIST_TOPICPRICE'); ?> : <?php echo $this->item->topicprice; ?></h3>
-		<p>(inc VAT)</p>
+		<p><?php echo JText::_('COM_TRAININGS_FORM_LBL_LIST_INCVAT'); ?></p>
 
-		<button>Book</button>
+		<button><?php echo JText::_('COM_TRAININGS_FORM_LBL_LIST_BOOK'); ?></button>
 
 	</div>
 </div>
@@ -85,17 +70,14 @@ $desc = "";
 	  		<ul>
 	  			<?php echo $this->item->topiccovered;?>
 	  		</ul>
-
 	  	</span>
 	  	<span class="left-side-c">
 	  		<h3><?php echo JText::_('COM_TRAININGS_LISTS_TARGETAUDIENCE'); ?></h3>
 	  		<ul>
 	  			<?php echo $this->item->targetaudience;?>
 	  		</ul>
-
 	  	</span>
 	 </div>
-
 	 <div class="topic_wrapp">
 	  	<span class="left-side-c">
 	  		<h3><?php echo JText::_('COM_TRAININGS_LISTS_DAYS'); ?></h3>
@@ -115,14 +97,9 @@ $desc = "";
 	  	</span>
 	  	<span class="left-side-c">
 	  		<h3><?php echo JText::_('COM_TRAININGS_LISTS_TOPICREQUIREMENTS'); ?></h3>
-	  		
 	  			<?php echo $this->item->topicrequirements;?>
-	  			
-	  		
-
 	  	</span>
 	 </div>
-
 	 <div class="topic_wrapp_last">
 	   		<h3><?php echo JText::_('COM_TRAININGS_TITLE_TRAINERNAME'); ?></h3>
 	  		<div class="inst_img">
@@ -130,19 +107,11 @@ $desc = "";
 	  		</div>
 	  		<h5><?php echo $this->item->trainername;?></h5>
 	  		<p><?php echo $designation;?></p>
-
 	  		<p><?php echo $desc;?></p>
-	  	 
 	 </div>
-
-	 
 	</div>
-
 	<div id="Training_Schedule" class="tabcontent">
-		
-
 		<?php
-
 		switch ($this->item->trainingtypecode) {
 			case 'F':
 				$cnt = 1;
